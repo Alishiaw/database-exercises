@@ -8,7 +8,7 @@ select genre from albums where name ='Nevermind';
 
 select * from albums where release_date BETWEEN 1990 AND 1999;
 
-select * from albums where sales < '20';
+select * from albums where sales < 20;
 
 select * from albums where genre = 'Rock';
 
