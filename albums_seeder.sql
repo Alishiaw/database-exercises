@@ -16,7 +16,7 @@ VALUES
   ('Michael Jackson','Bad',1987,20.3,'Pop, funk, rock'),
   ('Alanis Morissette','Jagged Little Pill',1995,24.8,'Alternative rock'),
   ('Celine Dion','Falling into You',1996,20.2,'Pop, Soft rock'),
-  ('The Beatles','Sgt. Pepper''s Lonely Hearts Club Band',1967,13.1,'Rock'),
+  ('The Beatles','Sgt. Pepper\'s Lonely Hearts Club Band',1967,13.1,'Rock'),
   ('Eagles','Hotel California',1976,21.5,'Rock, soft rock, folk rock'),
   ('Mariah Carey','Music Box',1993,19,'Pop, R&B, Rock'),
   ('Michael Jackson','Dangerous',1991,17.6,'Rock, Funk, Pop'),
