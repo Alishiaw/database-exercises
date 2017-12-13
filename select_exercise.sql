@@ -12,3 +12,5 @@ select * from albums where sales < 20;
 
 select * from albums where genre = 'Rock';
 
+
+
