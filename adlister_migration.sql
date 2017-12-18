@@ -1,0 +1,53 @@
+USE adlister_db;
+
+
+CREATE TABLE users (
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  email VARCHAR(100) UNIQUE NOT NULL ,
+  password VARCHAR(50) NOT NULL,
+  user_name VARCHAR(50) NOT NULL,
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE category (
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  category VARCHAR(50),
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE ads (
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  cat_id INT UNSIGNED NOT NULL ,
+  u_id INT UNSIGNED NOT NULL ,
+  title VARCHAR(50) NOT NULL ,
+  description VARCHAR(150),
+  PRIMARY KEY (id),
+  CONSTRAINT fk_category
+  FOREIGN KEY (cat_id)
+  REFERENCES category (id)
+    ON DELETE CASCADE
+    ON  UPDATE CASCADE,
+  CONSTRAINT fk_users
+  FOREIGN KEY (u_id)
+    REFERENCES users (id)
+    ON DELETE CASCADE
+    ON  UPDATE CASCADE
+);
+
+CREATE TABLE  ad_cat  (
+  ad_id INT UNSIGNED NOT NULL,
+  cat_id INT UNSIGNED NOT NULL,
+  CONSTRAINT fk_ads
+  FOREIGN KEY (ad_id)
+    REFERENCES ads (id)
+  ON DELETE CASCADE
+  ON  UPDATE CASCADE ,
+  CONSTRAINT fk_category1
+  FOREIGN KEY (cat_id)
+    REFERENCES category (id)
+    ON DELETE CASCADE
+    ON  UPDATE CASCADE
+);
+
+
+
